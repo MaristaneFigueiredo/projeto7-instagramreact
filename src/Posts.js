@@ -1,7 +1,35 @@
+import Post from "./Post";
+
+
+function tratarPost(post) { 
+    console.log('valor post',post)
+    return(
+    
+      <Post post={post} key={post.usuario}/>
+    )
+}
+
+
+
 export default function Posts() {
+
+  const itensPost = [      
+    { img: "img/meowed.svg", usuario: "meowed", conteudo: "img/gato-telefone.svg",imgCurtida:"img/respondeai.svg",nomeCurtido:"respondeai", qtdeCurtida:101.523},
+    { img: "img/barked.svg", usuario: "barked", conteudo: "img/dog.svg",imgCurtida:"img/adorable_animals.svg",nomeCurtido:"adorable_animals", qtdeCurtida:99.159}
+  ]
+
+
   return (
-    <div class="posts">
-      <div class="post">
+    <div class="posts">      
+    
+
+      {itensPost.map(function(e) {
+        return tratarPost(e)
+      }) }
+
+
+
+      {/* <div class="post">
         <div class="topo">
           <div class="usuario">
             <img src="img/meowed.svg" />
@@ -35,9 +63,9 @@ export default function Posts() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div class="post">
+      {/* <div class="post">
         <div class="topo">
           <div class="usuario">
             <img src="img/barked.svg" />
@@ -71,7 +99,8 @@ export default function Posts() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
     </div>
   );
 }
