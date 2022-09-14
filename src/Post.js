@@ -26,7 +26,7 @@ export default function Post(post) {
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
-            <div>
+            <div onClick="preencheCor()">              
               <ion-icon name="bookmark-outline"></ion-icon>
             </div>
           </div>

@@ -1,17 +1,21 @@
-// import StoryAntigo from "./StoryAntigo";
-import Story from "./Story";
+
+function exibirStory(item) {
+ return (
 
 
-function exibeStory(story) {
-  
-  return(
-    
-    <Story story={story} key={story.usuario}/>
+    <div class="story">
+    <div class="imagem">
+      <img src={item.img} />
+    </div>
+    <div class="usuario">
+      {item.usuario}
+    </div>
+  </div>
   )
 }
 
 
-export default function Stories() {
+export default function Story() {
 
   let itensStory = [
     { img: "img/9gag.svg", usuario: "9gag" },
@@ -25,27 +29,28 @@ export default function Stories() {
   ]
 
 
+
+
   return (
-    <div class="stories">
-      {itensStory.map( function(e) {
-      return exibeStory(e)
-      } )}
+
+    <>
+      {itensStory.map(exibirStory)}
+    </>
+   
 
 
 
 
+    //     <div class="story">
+    //     <div class="imagem">
+    //       <img src="img/9gag.svg" />         
+    //     </div>
+    //     <div class="usuario">
+    //       9gag
+    //     </div>
+    //   </div>
 
 
 
-
-      {/* Outra Forma */}
-      {/* <StoryAntigo/>   */}
-    
-
-      <div class="setinha">
-        <ion-icon name="chevron-forward-circle"></ion-icon>
-      </div>
-    </div>
-
-  )
+  );
 }

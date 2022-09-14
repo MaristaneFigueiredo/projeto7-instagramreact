@@ -4,7 +4,10 @@ export default function Usuario() {
             <img src="img/catanacomics.svg" />
             <div class="texto">
                 <strong>catanacomics</strong>
-                Catana
+                <div class="subtexto">
+                    Catana
+                    <ion-icon name="pencil-outline"></ion-icon>
+                </div>
             </div>
         </div>
     );
