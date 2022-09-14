@@ -1,4 +1,27 @@
+import Sugestao from "./Sugestao";
+
+
+function tratarSugestao(sugestao) { 
+    console.log('valor sugestao',sugestao)
+    return(
+    
+      <Sugestao sugestao={sugestao} key={sugestao.nome}/>
+    )
+}
+
+
 export default function Sugestoes() {
+
+    const itensSugestao = [
+        { img: "img/bad.vibes.memes.svg", nome: "bad.vibes.memes" },
+        { img: "img/chibirdart.svg", nome: "chibirdart" },
+        { img: "img/razoesparaacreditar.svg", nome: "razoesparaacreditar" },
+        { img: "img/adorable_animals.svg", nome: "adorable_animals" },
+        { img: "img/smallcutecats.svg", nome: "smallcutecats" }
+    ]
+
+
+
     return (
         <div class="sugestoes">
             <div class="titulo">
@@ -6,7 +29,12 @@ export default function Sugestoes() {
                 <div>Ver tudo</div>
             </div>
 
-            <div class="sugestao">
+            {itensSugestao.map(function (e) {
+                return tratarSugestao(e)
+            })}
+
+
+            {/* <div class="sugestao">
                 <div class="usuario">
                     <img src="img/bad.vibes.memes.svg" />
                     <div class="texto">
@@ -64,7 +92,7 @@ export default function Sugestoes() {
                 </div>
 
                 <div class="seguir">Seguir</div>
-            </div>
+            </div> */}
         </div>
     );
 }
