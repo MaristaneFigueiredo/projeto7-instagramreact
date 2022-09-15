@@ -1,14 +1,4 @@
-// import StoryAntigo from "./StoryAntigo";
-import Story from "./Story";
-
-
-function exibeStory(story) {
-  
-  return(
-    
-    <Story story={story} key={story.usuario}/>
-  )
-}
+ import Story from "./Story";
 
 
 export default function Stories() {
@@ -26,20 +16,15 @@ export default function Stories() {
 
 
   return (
-    <div class="stories">
-      {itensStory.map( function(e) {
-      return exibeStory(e)
-      } )}
+    <div class="stories">      
+  
+    {itensStory.map ( function(item) {
+      // {console.log('valor item',item)}
+       return <Story img={item.img} usuario={item.usuario} /> 
+    }) }
 
 
-
-
-
-
-
-
-      {/* Outra Forma */}
-      {/* <StoryAntigo/>   */}
+   
     
 
       <div class="setinha">

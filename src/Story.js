@@ -1,19 +1,15 @@
 
 
-export default function Story(story) {
-    
-
+export default function Story(props) {
+    // console.log('props', props);
     return (
-
-
         <div class="story">
-            <div class="imagem">
-                <img src={story.story.img}/>
-            </div>
-            <div class="usuario">
-                {story.story.usuario}
-            </div>
+        <div class="imagem">
+            <img src={props.img}/>
         </div>
-    )
-
+        <div class="usuario">
+            {props.usuario}
+        </div>
+    </div>
+    );
 }

@@ -10,12 +10,14 @@ export default function Usuario(props) {
 
     
     let foto;
-    let usuario;
-    let usuarioAtual = props.usuario; 
-   function pedirImagem() {
-       foto = prompt('Informe o link da imagem:')
-   }
+    
+//    function pedirImagem() {
+//        foto = prompt('Informe o link da imagem:')
+//    }
 
+
+   let usuario;
+   let usuarioAtual = props.usuario;
    function pedirUsuario() {
        usuario = prompt('Informe o seu nome:')
        usuarioAtual = (usuario === "" || usuario === null || usuario === undefined) ? props.usuario : usuario;
@@ -30,7 +32,7 @@ export default function Usuario(props) {
     // const usuarioAtual = (usuario === "" || usuario === null || usuario === undefined) ? props.usuario : usuario;
    
 
-    ///onClick="pedirImagem()"
+   
 
     return (
         <div class="usuario">
@@ -42,11 +44,13 @@ export default function Usuario(props) {
             <div class="texto">
                 <strong>{props.igUsuario}</strong>
                 <span>                  
-                    {usuarioAtual}                    
-                    {/* {props.usuario} */}
+                    {/* {usuarioAtual}                     */}
+                    {props.usuario}
                     {/* <ion-icon name="pencil" onclick ={props.evento} ></ion-icon> */}
 
                     <ion-icon name="pencil" onClick={pedirUsuario}  ></ion-icon>
+
+                    
                     
                 </span>
             </div>
