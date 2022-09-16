@@ -23,9 +23,7 @@ export default function Stories() {
        return <Story img={item.img} usuario={item.usuario} /> 
     }) }
 
-
    
-    
 
       <div class="setinha">
         <ion-icon name="chevron-forward-circle"></ion-icon>

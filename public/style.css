@@ -207,6 +207,13 @@
     height: 20px;
     margin-right: 10px;
   }
+
+  /* alteracao */
+  .post .fundo .curtidas strong{    
+    font-weight: 500;
+    color: #262626;
+  }
+  
   
   .post:last-child {
     margin-bottom: 18px;

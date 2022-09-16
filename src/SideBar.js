@@ -19,8 +19,8 @@ export default function SideBar() {
             {/* <Usuario usuario={"Catana"} imagem={"img/catanacomics.svg"} igUsuario = {"catanacomics"} evento = {pedirUsuario}/> */}
             <Usuario usuario={"Catana"} imagem={"img/catanacomics.svg"} igUsuario = {"catanacomics"}/>
            {/* Fim div usuario */} 
-            <Sugestoes/>
-          {/* Fim div sugestoes */}
+            
+            <Sugestoes/>          
 
           <div class="links">
             Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
