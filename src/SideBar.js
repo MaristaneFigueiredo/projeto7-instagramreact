@@ -5,11 +5,7 @@ import Sugestoes from "./Sugestoes";
 
 
 
-// function pedirUsuario() {
-//   let usuarioPrompt;
-//    usuarioPrompt = prompt('Informe o seu nome:')
-//    return usuarioPrompt; 
-// }
+
 
 
 
@@ -18,7 +14,7 @@ export default function SideBar() {
         <div class="sidebar">
             {/* <Usuario usuario={"Catana"} imagem={"img/catanacomics.svg"} igUsuario = {"catanacomics"} evento = {pedirUsuario}/> */}
             <Usuario usuario={"Catana"} imagem={"img/catanacomics.svg"} igUsuario = {"catanacomics"}/>
-           {/* Fim div usuario */} 
+     
             
             <Sugestoes/>          
 

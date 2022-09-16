@@ -1,40 +1,41 @@
+import React, { useState } from 'react';
 
 
 export default function Usuario(props) {
 
-    // const usuario = prompt('Informe seu nome:');   
-    // const foto = prompt('Informe sua foto de perfil:')
-    
-    // let foto = "img/catanacomics.svg";  
-
+  
 
     
     let foto;
     let usuario;
-    let usuarioAtual = props.usuario; 
+    
    function pedirImagem() {
        foto = prompt('Informe o link da imagem:')
+       foto = (foto === "" || foto === null || foto === undefined) ?  props.imagem : foto;
+       SetFoto(foto);
    }
 
    function pedirUsuario() {
-       usuario = prompt('Informe o seu nome:')
-       usuarioAtual = (usuario === "" || usuario === null || usuario === undefined) ? props.usuario : usuario;
-       console.log('usuarioAtual', usuarioAtual);
-       return usuarioAtual;
+       usuario = prompt('Informe o seu nome:')    
+       usuario = (usuario === "" || usuario === null || usuario === undefined) ? props.usuario : usuario;
+       SetUsuario(usuario);     
 
    }
 
-
-
-    const fotoAtual = (foto === "" || foto === null || foto === undefined) ?  props.imagem : foto;
-    // const usuarioAtual = (usuario === "" || usuario === null || usuario === undefined) ? props.usuario : usuario;
+//    const [variavel, NomeQAcionaOMomentoDaAtualizacao] = useState(EstadoinicialDaVariavel )
+//    const [count, setCount] = useState(0); 
+//    onClick={() => setCount(count + 1)}
+// https://pt-br.reactjs.org/docs/hooks-state.html
+  
    
 
-    ///onClick="pedirImagem()"
-
+//  const [variavel, NomeQAcionaOMomentoDaAtualizacao] = useState(EstadoinicialDaVariavel )
+    const [usuarioAtual, SetUsuario] = useState(props.usuario); 
+    const [fotoAtual, SetFoto] = useState(props.imagem); 
+    
     return (
         <div class="usuario">
-             <img src={fotoAtual} />
+             <img onClick={pedirImagem} src={fotoAtual} />
              {/* <img src={props.imagem} /> */}
             
                            
@@ -43,10 +44,12 @@ export default function Usuario(props) {
                 <strong>{props.igUsuario}</strong>
                 <span>                  
                     {usuarioAtual}                    
-                    {/* {props.usuario} */}
+                 
                     {/* <ion-icon name="pencil" onclick ={props.evento} ></ion-icon> */}
 
                     <ion-icon name="pencil" onClick={pedirUsuario}  ></ion-icon>
+
+                    
                     
                 </span>
             </div>
